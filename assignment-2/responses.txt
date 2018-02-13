@@ -1,0 +1,7 @@
+1.) One way that data travels across the internet is through packets. Packets travel between machines until they reach their final destination.
+
+2.) The DNS is an Internet service that translates domain names to IP addresses.
+
+3.) A cookie is a small piece of data on a user’s computer that is sent from a website.
+
+4.) The protocol, domain name, and path.
