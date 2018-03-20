@@ -10,9 +10,9 @@
       div {width:32%;display:inline-block;vertical-align:text-top;}
       table, td, th {
       /* -- Step 16 -- */
-
-
-
+        border: 2px solid gray;
+        border-collapse: collapse;
+        padding: 5px;
       }
     </style>
   </head>
@@ -28,103 +28,178 @@
 
     <main>
       <!-- Step 1 -->
-
+      <form action="http://www.example.com/register.php" method="get">
 
       <!-- Part 1: Basic Info -->
-      <fieldset>
-        <legend>Contact Details</legend>
+        <fieldset>
+          <legend>Contact Details</legend>
         <!-- Step 2 (Name) -->
-        <p>Name:
-          <input type="text" name="name" id="name-first" />
-          <input type="text" name="name" id="name-middle" />
-          <input type="text" name="name" id="name-last" />
-        </p>
+          <p>Name:
+          <input type="text" name="name" id="name-first" placeholder="First"/>
+          <input type="text" name="name" id="name-middle" placeholder="MI" maxlength="3" size="3"/>
+          <input type="text" name="name" id="name-last" placeholder="Last"/>
+          </p>
         <!-- Step 3 (E-mail) -->
-        <p>E-mail:
-
-        </p>
+          <p>E-mail:
+            <input type="email" name="email" placeholder="you@email.com" autofocus/>
+          </p>
 
         <!-- Step 4 (Date) -->
-        <p>Date of Birth:
-
-        </p>
+          <p>Date of Birth:
+            <input type="date" name="date-of-birth" placeholder="mm/dd/yyyy"/>
+          </p>
 
         <!-- Step 5 ("No" Radio) -->
-        <p>Have you taken a web design course before?</p>
-            <input id="yes" type="radio" name="prev-course" value="y">
+          <p>Have you taken a web design course before?</p>
+            <input id="yes" type="radio" name="prev-course" value="y"/>
               <label for="yes">Yes</label>
+            <input id="no" type="radio" name="prev-course" value="n"/>
+              <label for="no">No</label>
 
-      </fieldset>
+        </fieldset>
 
 
-      <br />
+        <br />
 
 
-      <!-- Part : Previous Experience -->
-      <fieldset>
-        <legend>Previous Experience</legend>
+      <!-- Part 2: Previous Experience -->
+        <fieldset>
+          <legend>Previous Experience</legend>
         <!-- BROWSERS --><div id="browsers">
-          <figure>
-            <img src="./images/browsers.png" alt="Image of a browser" title="Broswer Icon" width="100" height="100" />
-            <figcaption>Wowsers, Browsers</figcaption>
-          </figure>
-          <p>What is your preferred browser?</p>
-          <p><i>Choose one:</i></p>
+            <figure>
+              <img src="./images/browsers.png" alt="Image of a browser" title="Broswer Icon" width="100" height="100" />
+              <figcaption>Wowsers, Browsers</figcaption>
+            </figure>
+            <p>What is your preferred browser?</p>
+            <p><i>Choose one:</i></p>
           <!-- Step 6 -->
+            <input id="firefox" type="radio" name="browser" value="firefox"/>
+              <label for="firefox">Firefox</label> <br/>
+            <input id="chrome" type="radio" name="browser" value="chrome" checked/>
+              <label for="chrome">Chrome</label> <br/>
+            <input id="explorer" type="radio" name="browser" value="explorer"/>
+              <label for="explorer">Internet Explorer</label> <br/>
+            <input id="safari" type="radio" name="browser" value="safari"/>
+              <label for="safari">Safari</label> <br/>
+            <input id="opera" type="radio" name="browser" value="opera"/>
+              <label for="opera">Opera</label> <br/>
+            <input id="edge" type="radio" name="browser" value="edge"/>
+              <label for="edge">Microsoft Edge</label> <br/>
+            <input id="other" type="radio" name="browser" value="other"/>
+              <label for="other">Other</label> <br/>
 
-        </div>
+
+          </div>
 
         <!-- LANGUAGES --><div id="languages">
           <!-- Step 7 -->
-
-          <p>What languages are you familiar with?</p>
-          <p><i>Choose one or more:</i></p>
+            <figure>
+              <img src="./images/languages.png" alt="Image of the experience" title="experience Icon" width="100" height="100" />
+              <figcaption>Chatting in Code</figcaption>
+            </figure>
+            <p>What languages are you familiar with?</p>
+            <p><i>Choose one or more:</i></p>
             <!-- Step 8 -->
+            <input id="html" type="checkbox" name="language" value="html"/>
+              <label for="html">HTML</label> <br/>
+            <input id="css" type="checkbox" name="language" value="css"/>
+              <label for="css">CSS</label> <br/>
+            <input id="JavaScript" type="checkbox" name="language" value="JavaScript"/>
+              <label for="JavaScript">JavaScript</label> <br/>
+            <input id="php" type="checkbox" name="language" value="php"/>
+              <label for="php">PHP</label> <br/>
+            <input id="ruby" type="checkbox" name="language" value="ruby"/>
+              <label for="ruby">Ruby</label> <br/>
+            <input id="python" type="checkbox" name="language" value="python"/>
+              <label for="python">Python</label> <br/>
+            <input id="other-language" type="checkbox" name="language" value="other"/>
+              <label for="other-language">Other</label> <br/>
 
-        </div>
+          </div>
 
         <!-- SHORT-ANSWER--><div id="short-answer">
           <!-- Step 9 -->
+            <figure>
+              <img src="./images/experience.png" alt="Image of the experience" title="experience Icon" width="100" height="100" />
+              <figcaption>In the Know?</figcaption>
+            </figure>
+            <p>Introduce yourself!</p>
 
-          <p>Introduce yourself!</p>
-
-          <p>“Hi! I'm a
-            <select name="experience-level">
+            <p>“Hi! I'm a
+              <select name="experience-level">
             <!-- Step 10 -->
-
-            </select>
+                <option value="guppy">guppy</option>
+                <option value="beginner">beginner</option>
+                <option value="novice" selected>novice</option>
+                <option value="journeyman">journeyman</option>
+                <option value="expert">expert</option>
+                <option value="wizard">wizard</option>
+              </select>
             web designer or developer.”</p>
 
-          <p>“Last year, I spent
+            <p>“Last year, I spent
             <!-- Step 11 -->
-            <input type="text" name="experince-time"
+              <input type="number" name="experince-time"
             id="experince-time" placeholder="##" min="0" max="12" size="2"/>
             months studying or working in this field.”</p>
 
           <!-- Step 12 (textarea) -->
-          “I think my most difficult task will be...
-        </div>
-      </fieldset>
+          <textarea name="difficult-task" id="difficult-task" cols="30" rows="2">I think my most difficult task will be...</textarea>
+          </div>
+        </fieldset>
 
 
-      <br />
+        <br />
 
 
       <!-- Part 3: Course Offerings -->
       <!-- Steps 13-18 -->
-
+        <fieldset>
+          <legend>Offerings and Availability</legend>
 
         <!-- Step 19 -->
-        <table>
-          
-        </table>
-        <p>Yes! Sign me up for weekly e-mail alerts.
+            <table>
+              <tr>
+                <th></th>
+                <th scope="col">Spring Semester</th>
+                <th scope="col">Summer Session</th>
+                <th scope="col">Autumn Semester</th>
+                <th scope="col">Winter Session</th>
+                <th scope="col">Special Session</th>
+              </tr>
+              <tr>
+                <th scope="row">Times (PM)</th>
+                <td>M, W 12:00-2:00</td>
+                <td>F 5:30-9:30</td>
+                <td>M, W 12:00-2:00</td>
+                <td>F 12:00-4:00</td>
+                <td>TBA</td>
+              </tr>
+              <tr>
+                <th scope="row">Seats Available</th>
+                <td>12/60</td>
+                <td>FULL</td>
+                <td>FULL</td>
+                <td>2/60</td>
+                <td>0/60</td>
+              </tr>
+            </table>
 
-        </p>
-
-
-    </main>
+            <p>
+              Username:
+              <input type="text" name="username" id="username" required/> <br/>
+              <br/>
+              Password:
+              <input type="password" name="password" id="password" required/>
+            </p>
+            <p>Yes! Sign me up for weekly e-mail alerts.
+              <input type="checkbox" name="newsletter" value="y" checked/>
+            </p>
+            <input type="image" src="./images/reg-button.png" alt="subscribe button image" width="100"/>
+          </fieldset>
+        </form>
+      </main>
     <!-- Step 20 -->
-
+    <img src="./images/registration-station.jpg" alt="Image of the registration station" title="Register Today!" width="500" height="333"/>
   </body>
 </html>
