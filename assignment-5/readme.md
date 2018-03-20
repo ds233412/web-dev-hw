@@ -4,6 +4,6 @@ An Id is something completely unique on a website. Class is a way of grouping si
 
 Third party media is better because it is more reliable and works at a faster rate.
 
-My work cycle for this assignment for this assignment was rather slow for me, because I hard time remembering some of the concepts in previous classes. I eventually found my groove, and ended up having a lot of fun with it. I am a musician, so I found this assignment particularly interesting.
+My work cycle for this assignment for this assignment was rather slow for me, because I had a hard time remembering some of the concepts in previous classes. I eventually found my groove, and ended up having a lot of fun with it. I am a musician, so I found this assignment particularly interesting.
 
 ![Work Space](./images/screenshot.png)
