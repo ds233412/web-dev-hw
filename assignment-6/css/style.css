@@ -1,0 +1,48 @@
+.box1{
+    border-style: solid;
+    border-width: 5px;
+    border-color: darkblue;
+    padding: 10px;
+    background-color: lightblue;
+    height: 600px;
+    width: 600px}
+
+      .box1.inner{
+        font-family: bold;
+        border-style: ridge;
+        border-width: 15px;
+        border-color:pink;
+        opacity: .75;
+        padding: 60px;
+        background-color: darkblue;
+        width: 600px;
+        height: 200px;
+        position: absolute;
+        margin-right: auto;
+        top: 150px;
+        margin-left: 350px}
+
+.box2{
+  border-style: groove;
+  border-width: 35px;
+  border-color: orange;
+  opacity: .75;
+  padding: 20px;
+  background-color: black;
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  margin-left:400px;
+  top: 300px}
+
+.imagebox{
+  position: absolute;
+  bottom: 25px;
+  right: 15px;
+  z-index: 1}
+
+  .cube {
+    position: absolute;
+    top: 300px;
+    left: -700px;
+  }
